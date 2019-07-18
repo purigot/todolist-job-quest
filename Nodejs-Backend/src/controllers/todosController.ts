@@ -41,7 +41,7 @@ export class TodosController {
                 if (error) {
                     res.send(error);
                 }
-                res.status(201).send(`Create todo with ID: ${id}`);
+                res.status(201).send({ created_id : id});
             });
     }
 

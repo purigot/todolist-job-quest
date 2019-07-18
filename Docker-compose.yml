@@ -1,0 +1,23 @@
+version: '3'
+services: 
+  todolist-frontend: 
+    container_name: todolist-frontend-quest
+    build: ./React-Frontend
+    restart: always
+    command: "npm run build && npm start"
+    ports: 
+      - '3001:3000'
+    networks:
+      - todolist-job-quest
+  todolist-backend:
+    container_name: todolist-backend-quest
+    build: ./Nodejs-Backend
+    restart: always
+    command: "npm run prod"
+    ports: 
+      - '4001:4000'
+    networks:
+      - todolist-job-quest
+networks:
+  todolist-job-quest: 
+    driver: bridge
