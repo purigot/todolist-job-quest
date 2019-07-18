@@ -120,7 +120,7 @@ export default class CreateTodo extends Component<RouteComponentProps> {
             title: this.state.title,
         };
 
-        axios.post("http://localhost:4000/todos/createTodo", newTodo)
+        axios.post("http://34.87.65.231:4000/todos/createTodo", newTodo)
             .then((res) => console.log(res));
 
         this.props.history.push("/");

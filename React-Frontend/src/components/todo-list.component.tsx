@@ -10,7 +10,7 @@ export default class TodoList extends Component {
     };
 
     public componentDidMount = () => {
-        axios.get("http://localhost:4000/todos/getTodo")
+        axios.get("http://34.87.65.231:4000/todos/getTodo")
             .then((response) => {
                 this.setState({
                     todos: response.data,
@@ -24,7 +24,7 @@ export default class TodoList extends Component {
 
     public componentDidUpdate(prevState: any) {
 
-        axios.get("http://localhost:4000/todos/getTodo")
+        axios.get("http://34.87.65.231:4000/todos/getTodo")
             .then((response) => {
                 this.setState({
                     todos: response.data,
