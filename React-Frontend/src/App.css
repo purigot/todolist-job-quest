@@ -1,0 +1,45 @@
+.main.container {
+  margin-top: 10px;
+}
+
+.ui.card > .content {
+  padding: 3em 2em;
+}
+
+.ui.card, .ui.cards>.card {
+  width: 900px;
+  height: 620px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.center-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+i.icon {
+  cursor: pointer
+}
+
+body {
+  background-color: #F3F3F3;
+}
+
+.center-checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+.table-container {
+  max-height: 450px;
+  overflow-x: auto;
+}
+
+.ui.table thead tr:first-child > th {
+  position: sticky !important;
+  top: 0;
+  z-index: 2;
+}
