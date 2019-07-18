@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.cee572f4.chunk.css",
-    "main.js": "/static/js/main.926f720e.chunk.js",
-    "main.js.map": "/static/js/main.926f720e.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.621b5bde.chunk.css": "/static/css/2.621b5bde.chunk.css",
-    "static/js/2.e3ed33c0.chunk.js": "/static/js/2.e3ed33c0.chunk.js",
-    "static/js/2.e3ed33c0.chunk.js.map": "/static/js/2.e3ed33c0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.4505c040ddcc1a744835c128a3f01bae.js": "/precache-manifest.4505c040ddcc1a744835c128a3f01bae.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.621b5bde.chunk.css.map": "/static/css/2.621b5bde.chunk.css.map",
-    "static/css/main.cee572f4.chunk.css.map": "/static/css/main.cee572f4.chunk.css.map",
-    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff"
+    "main.css": "/todolist-job-quest/static/css/main.cee572f4.chunk.css",
+    "main.js": "/todolist-job-quest/static/js/main.bc576aa9.chunk.js",
+    "main.js.map": "/todolist-job-quest/static/js/main.bc576aa9.chunk.js.map",
+    "runtime~main.js": "/todolist-job-quest/static/js/runtime~main.a74eef2e.js",
+    "runtime~main.js.map": "/todolist-job-quest/static/js/runtime~main.a74eef2e.js.map",
+    "static/css/2.96623e0a.chunk.css": "/todolist-job-quest/static/css/2.96623e0a.chunk.css",
+    "static/js/2.e3ed33c0.chunk.js": "/todolist-job-quest/static/js/2.e3ed33c0.chunk.js",
+    "static/js/2.e3ed33c0.chunk.js.map": "/todolist-job-quest/static/js/2.e3ed33c0.chunk.js.map",
+    "index.html": "/todolist-job-quest/index.html",
+    "precache-manifest.cf541140e586e87231958a1a68d3b28a.js": "/todolist-job-quest/precache-manifest.cf541140e586e87231958a1a68d3b28a.js",
+    "service-worker.js": "/todolist-job-quest/service-worker.js",
+    "static/css/2.96623e0a.chunk.css.map": "/todolist-job-quest/static/css/2.96623e0a.chunk.css.map",
+    "static/css/main.cee572f4.chunk.css.map": "/todolist-job-quest/static/css/main.cee572f4.chunk.css.map",
+    "static/media/semantic.min.css": "/todolist-job-quest/static/media/outline-icons.ef60a4f6.woff"
   }
 }
