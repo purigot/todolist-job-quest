@@ -15,7 +15,7 @@ export class TodosController {
     public getTodo(req: Request, res: Response) {
         pool.query("SELECT * FROM todos ORDER BY completed ASC, updated_at", (error: Error, results: QueryResult) => {
             if (error) {
-                res.send(error);
+                throw error;
             }
             res.json(results.rows);
         });
@@ -25,7 +25,7 @@ export class TodosController {
         const id = req.params.id;
         pool.query("SELECT * FROM todos WHERE id = $1", [id], (error: Error, results: QueryResult) => {
             if (error) {
-                res.send(error);
+                throw error;
             }
 
             res.status(200).json(results.rows);
@@ -39,7 +39,7 @@ export class TodosController {
         pool.query("INSERT INTO todos (id, title, description, priority, completed) VALUES ($1, $2, $3, $4, $5)"
             , [id, title, description, priority, completed], (error: Error, results: QueryResult) => {
                 if (error) {
-                    res.send(error);
+                    throw error;
                 }
                 res.status(201).send({ created_id : id});
             });
@@ -54,7 +54,7 @@ export class TodosController {
             [title, description, priority, id],
             (error: Error, results: QueryResult) => {
                 if (error) {
-                    res.send(error);
+                    throw error;
                 }
                 res.status(200).send(`Todo modified with ID: ${id}`);
             },
@@ -67,7 +67,7 @@ export class TodosController {
 
         pool.query("UPDATE todos SET completed = $1 WHERE id = $2", [completed, id], (error: Error, results: QueryResult) => {
             if (error) {
-                res.send(error);
+                throw error;
             }
             res.status(200).send(results);
         });
@@ -78,7 +78,7 @@ export class TodosController {
 
         pool.query("DELETE FROM todos WHERE id = $1", [id], (error: Error, results: QueryResult) => {
             if (error) {
-                res.send(error);
+                throw error;
             }
             res.status(200).send(`Todo deleted with ID: ${id}`);
         });

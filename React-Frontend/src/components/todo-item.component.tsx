@@ -29,7 +29,7 @@ class Todo extends Component<ITodoItem, IState> {
             obj.completed = true;
         }
 
-        axios.put("http://34.87.65.231:4000/todos/updateCompleted/" + this.props.todo.id, obj)
+        axios.put("http://34.87.65.231:4000/todos/" + this.props.todo.id, obj)
             .then((response) => {
                 console.log(response);
             });
@@ -37,7 +37,7 @@ class Todo extends Component<ITodoItem, IState> {
     }
 
     public deleteTodoItem = () => {
-        axios.delete("http://34.87.65.231:4000/todos/deleteTodo/" + this.props.todo.id)
+        axios.delete("http://34.87.65.231:4000/todos/" + this.props.todo.id)
             .then((response) => {
                 console.log(response);
             });

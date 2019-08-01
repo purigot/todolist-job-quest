@@ -6,28 +6,14 @@ export class Routes {
 
     public routes(app: any): void {
 
-        // Get todo
-        app.route("/todos/getTodo")
-            .get(this.todosController.getTodo);
+        app.route("/todos")
+            .get(this.todosController.getTodo)
+            .post(this.todosController.createTodo)
 
-        // Get todo by ID
-        app.route("/todos/getTodoById/:id")
-            .get(this.todosController.getTodoById);
-
-        // POST new todo
-        app.route("/todos/createTodo")
-            .post(this.todosController.createTodo);
-
-        // Update todo
-        app.route("/todos/updateTodo/:id")
-            .put(this.todosController.updateTodo);
-
-        // Update complete state
-        app.route("/todos/updateCompleted/:id")
-            .put(this.todosController.updateCompleted);
-
-        // Delete todo
-        app.route("/todos/deleteTodo/:id")
-            .delete(this.todosController.deleteTodo);
+        app.route("/todos/:id")
+            .get(this.todosController.getTodoById)
+            .patch(this.todosController.updateTodo)
+            .patch(this.todosController.updateCompleted)
+            .delete(this.todosController.deleteTodo)
     }
 }
