@@ -14,7 +14,7 @@ class App extends React.Component {
         <div className="ui center-container">
           <div className="ui container card">
             <nav className="ui yellow inverted huge menu" style={{marginBottom: 0}}>
-              <div className="header item">Fictionlog Job Quest</div>
+              <div className="header item">Todolist Job Quest</div>
               <Link className="item" to="/">Todos</Link>
               <Link className="item" to="/create">Create Todo</Link>
             </nav>
