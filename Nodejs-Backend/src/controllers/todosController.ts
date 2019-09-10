@@ -4,7 +4,7 @@ import uuid from "uuid";
 
 const pool = new Pool({
     database: "todolist",
-    host: "34.87.65.231",
+    host: "35.198.239.206",
     password: "123456",
     port: 5432,
     user: "admin",

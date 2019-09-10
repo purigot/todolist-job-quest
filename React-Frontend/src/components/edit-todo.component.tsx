@@ -16,7 +16,7 @@ export default class EditTodo extends Component<RouteComponentProps<IIdParams>> 
 
     public componentDidMount() {
 
-        axios.get("http://34.87.65.231:4000/todos/" + this.props.match.params.id)
+        axios.get("http://35.198.239.206:4000/todos/" + this.props.match.params.id)
             .then((response) => {
                 const { title, description, priority } = response.data[0];
                 this.setState({
@@ -51,7 +51,7 @@ export default class EditTodo extends Component<RouteComponentProps<IIdParams>> 
             title: this.state.title,
         };
 
-        axios.put("http://34.87.65.231:4000/todos/" + this.props.match.params.id, obj)
+        axios.put("http://35.198.239.206:4000/todos/" + this.props.match.params.id, obj)
             .then((res) => console.log(res));
 
         this.props.history.push("/");
