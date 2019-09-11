@@ -41,36 +41,35 @@ export class TodosController {
                 if (error) {
                     throw error;
                 }
-                res.status(201).send({ created_id : id});
+                res.status(201).send({ created_id: id });
             });
     }
 
     public updateTodo(req: Request, res: Response) {
         const id = req.params.id;
-        const { title, description, priority } = req.body;
+        const { title, description, priority, completed } = req.body;
 
-        pool.query(
-            "UPDATE todos SET title = $1, description = $2, priority = $3 WHERE id = $4",
-            [title, description, priority, id],
-            (error: Error, results: QueryResult) => {
+        if (completed == null) {
+            pool.query(
+                "UPDATE todos SET title = $1, description = $2, priority = $3 WHERE id = $4",
+                [title, description, priority, id],
+                (error: Error, results: QueryResult) => {
+                    if (error) {
+                        throw error;
+                    }
+                    res.status(200).send(`Todo modified with ID: ${id}`);
+                },
+            );
+        } else {
+
+            pool.query("UPDATE todos SET completed = $1 WHERE id = $2", [completed, id], (error: Error, results: QueryResult) => {
                 if (error) {
                     throw error;
                 }
-                res.status(200).send(`Todo modified with ID: ${id}`);
-            },
-        );
-    }
+                res.status(200).send(results);
+            });
 
-    public updateCompleted(req: Request, res: Response) {
-        const id = req.params.id;
-        const { completed } = req.body;
-
-        pool.query("UPDATE todos SET completed = $1 WHERE id = $2", [completed, id], (error: Error, results: QueryResult) => {
-            if (error) {
-                throw error;
-            }
-            res.status(200).send(results);
-        });
+        }
     }
 
     public deleteTodo(req: Request, res: Response) {

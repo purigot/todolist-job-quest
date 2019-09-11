@@ -13,7 +13,6 @@ export class Routes {
         app.route("/todos/:id")
             .get(this.todosController.getTodoById)
             .patch(this.todosController.updateTodo)
-            .patch(this.todosController.updateCompleted)
             .delete(this.todosController.deleteTodo)
     }
 }
